@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+    margin-top: 60px; /* Space for navbar */
+    height: calc(100vh - 60px); /* Adjust height for navbar */
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background-color: #2d383a;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background-color: rgb(137, 216, 245);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar h1 {
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust container height to fit below navbar */
+}
+
+.left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+#formContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f4f4f4;
+    max-height: 83vh;
+}
+
+.left-section {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.left-section input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.right-section {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #ffffff;
+    min-height: 300px;
+    overflow-y: auto;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-section h3 {
+    text-align: center;
+}
+
+.editor-toolbar {
+    margin-bottom: 10px;
+}
+
+.editor-toolbar button {
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.editor {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    overflow-y: auto;
+    text-align: left;
+    background: white;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.data-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    text-align: justify;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 10px;
+    position: sticky;
+    bottom: 0;
+    background-color: white;  /* To maintain visibility when sticky */
+    z-index: 10;  /* Ensure it's above other content */
+    padding: 10px 0; 
+}
+
+.btn-container button {
+    font-weight: bolder;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(83, 205, 250);
+    color: white;
+}
+
+#dataContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.download-btn-container {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#downloadBtn {
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(83, 205, 250);
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .container {
+        margin-top: 2vh;
+        flex-direction: column;
+        height: auto;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .left-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .right-section {
+        width: 83vw;
+        margin-top: 20px;
+        overflow-x: hidden;
+    }
+
+    #formContainer {
+        max-height: none;
+        height: auto;
+    }
+
+    .left-section input {
+        width: 100%;
+        box-sizing: border-box; /* Ensure inputs don't overflow */
+        margin-bottom: 10px; /* Ensure there's space between inputs */
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Adds gap between buttons */
+        align-items: center;
+    }
+
+    .btn-container button {
+        width: 100%; /* Make buttons full width */
+        padding: 12px;
+    }
+
+    #dataContainer {
+        flex-grow: 1;
+        overflow-y: auto;
+        width: 84vw;
+    }
+
+    #downloadBtn {
+        width: 60vw;
+        padding: 12px;
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+    }
+}

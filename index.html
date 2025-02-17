@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>OkResume</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>OkResume</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Section: Scrollable form container -->
+        <div class="left-container">
+            <div id="formContainer">
+                <div class="btn-container" id="addButtonContainer">
+                    <button onclick="addNewForm()">Add Section</button>
+                    <button id="submitAllBtn" onclick="submitAllData()">Submit All</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section: Displays Submitted Data -->
+        <div class="right-section">
+            <h3>Preview</h3>
+            <div id="dataContainer"></div>
+            <button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+
+</body>
+
+</html>
