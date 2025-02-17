@@ -170,7 +170,7 @@ body {
     margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
     body {
         padding: 10px;
         overflow-x: hidden; /* Prevent horizontal overflow */
