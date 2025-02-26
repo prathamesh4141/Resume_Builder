@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('img/img1.jpeg'); /* Full-page background */
+    background-image: url('/Resume_Builder/img/img1.jpeg');
     background-size: cover; /* Ensures the image covers the full page */
     background-repeat: no-repeat;
     background-position: center center; /* Centers the background image */
