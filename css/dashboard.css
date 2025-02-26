@@ -8,13 +8,17 @@ body {
     height: calc(100vh - 60px); /* Adjust height for navbar */
     overflow: hidden;
     scroll-behavior: smooth;
-    background-color: #2d383a;
+    background-image: url('/img/1559cbe5-48d0-493c-8fd9-905a2abc2ebb.jpeg'); /* Full-page background */
+    background-size: cover; /* Ensures the image covers the full page */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centers the background image */
 }
 
 /* Navbar Styling */
 .navbar {
     width: 100%;
-    background-color: rgb(137, 216, 245);
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.8);
     display: flex;
     align-items: center;
     justify-content: space-between; /* Ensures space between logo and logout button */
@@ -36,8 +40,6 @@ body {
 
 /* Logout Button Styling */
 #logoutBtn {
-    background-color: #ff4d4d; /* Red color for logout */
-    color: white;
     border: none;
     padding: 10px 15px;
     font-size: 16px;
@@ -46,11 +48,15 @@ body {
     border-radius: 5px;
     margin-right: 4vw;
     transition: all 0.3s ease-in-out;
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Ensures proper padding */
+    text-align: center;
+    color: #000000;
 }
 
 /* Hover Effect */
 #logoutBtn:hover {
-    background-color: #cc0000; /* Darker red on hover */
+    background-color: #ffffff; /* Darker red on hover */
 }
 
 
@@ -67,6 +73,7 @@ body {
     flex-direction: column;
     max-height: 100%;
 }
+
 
 #formContainer {
     flex-grow: 1;

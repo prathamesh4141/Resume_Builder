@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="js/index.js"></script>
-    <link rel="stylesheet" href="css/index.css">
+    <script type="module" src="/js/index.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
     <title>Easy Resume</title>
 </head>
+
 <body>
 
     <!-- Navbar -->
     <div class="navbar">
         <h2>Easy Resume</h2>
         <div class="nav-buttons">
-            <button onclick="showForm('login')">Sign In</button>
-            <button onclick="showForm('register')">Sign Up</button>
+            <a href="javascript:void(0);" onclick="showForm('login')" class="nav-link">Sign In</a>
+            <a href="javascript:void(0);" onclick="showForm('register')" class="nav-link">Sign Up</a>
         </div>
     </div>
+
 
     <!-- Login Modal -->
     <div id="login" class="modal">
@@ -72,4 +75,5 @@
     </script>
 
 </body>
+
 </html>

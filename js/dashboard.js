@@ -68,9 +68,15 @@ function addNewForm() {
         <input type="text" id="title-${formCount}" placeholder="Enter Title">
         
         <div class="editor-toolbar">
-            <button onclick="formatText('${formCount}', 'bold')"><b>B</b></button>
-            <button onclick="formatText('${formCount}', 'italic')"><i>I</i></button>
-            <button onclick="formatText('${formCount}', 'underline')"><u>U</u></button>
+            <button onclick="formatText('${formCount}', 'bold')">
+                <span class="material-symbols-outlined">format_bold</span>
+            </button>
+            <button onclick="formatText('${formCount}', 'italic')">
+                <span class="material-symbols-outlined">format_italic</span>
+            </button>
+            <button onclick="formatText('${formCount}', 'underline')">
+                <span class="material-symbols-outlined">format_underlined</span>
+            </button>
             <button onclick="insertList('${formCount}', 'unordered')">
                 <span class="material-symbols-outlined">format_list_bulleted</span>
             </button>
@@ -78,6 +84,7 @@ function addNewForm() {
                 <span class="material-symbols-outlined">format_list_numbered</span>
             </button>
         </div>
+
         <div class="editor" contenteditable="true" id="detail-${formCount}"></div>
         <button class="delete-btn" onclick="deleteForm('${formCount}')">Delete</button>
     `;
@@ -201,13 +208,19 @@ function loadUserData(userUID) {
                         <input type="text" id="title-${section.id}" placeholder="Enter Title" value="${section.title}">
                         
                         <div class="editor-toolbar">
-                            <button onclick="formatText('${section.id}', 'bold')"><span class="material-symbols-outlined">format_bold</span></button>
-                            <button onclick="formatText('${section.id}', 'italic')"><span class="material-symbols-outlined">format_italic</span></button>
-                            <button onclick="formatText('${section.id}', 'underline')"><span class="material-symbols-outlined">format_underlined</span></button>
-                            <button onclick="insertList('${section.id}', 'unordered')">
+                            <button onclick="formatText('${section.id}', 'bold')" title="Bold">
+                                <span class="material-symbols-outlined">format_bold</span>
+                            </button>
+                            <button onclick="formatText('${section.id}', 'italic')" title="Italic">
+                                <span class="material-symbols-outlined">format_italic</span>
+                            </button>
+                            <button onclick="formatText('${section.id}', 'underline')" title="Underline">
+                                <span class="material-symbols-outlined">format_underlined</span>
+                            </button>
+                            <button onclick="insertList('${section.id}', 'unordered')" title="Unordered List">
                                 <span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
-                            <button onclick="insertList('${section.id}', 'ordered')">
+                            <button onclick="insertList('${section.id}', 'ordered')" title="Ordered List">
                                 <span class="material-symbols-outlined">format_list_numbered</span>
                             </button>
                         </div>
