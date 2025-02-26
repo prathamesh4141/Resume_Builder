@@ -8,7 +8,7 @@ body {
     height: calc(100vh - 60px); /* Adjust height for navbar */
     overflow: hidden;
     scroll-behavior: smooth;
-    background-image: url('img/img1.jpeg'); /* Full-page background */
+    background-image: url('/Resume_Builder/img/img1.jpeg'); /* Full-page background */
     background-size: cover; /* Ensures the image covers the full page */
     background-repeat: no-repeat;
     background-position: center center; /* Centers the background image */
