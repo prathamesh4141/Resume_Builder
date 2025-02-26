@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <title>OkResume</title>
-    <link rel="stylesheet" href="css/index.css">
+    <script type="module" src="/js/index.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Easy Resume</title>
 </head>
-
 <body>
 
     <!-- Navbar -->
     <div class="navbar">
-        <h1>OkResume</h1>
+        <h2>Easy Resume</h2>
+        <div class="nav-buttons">
+            <button onclick="showForm('login')">Sign In</button>
+            <button onclick="showForm('register')">Sign Up</button>
+        </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Left Section: Scrollable form container -->
-        <div class="left-container">
-            <div id="formContainer">
-                <div class="btn-container" id="addButtonContainer">
-                    <button onclick="addNewForm()">Add Section</button>
-                    <button id="submitAllBtn" onclick="submitAllData()">Submit All</button>
-                </div>
+    <!-- Login Modal -->
+    <div id="login" class="modal">
+        <span class="close" onclick="closeForm('login')">&times;</span>
+        <h3>Login</h3>
+        <form id="loginForm">
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" id="loginEmail" required>
             </div>
-        </div>
-
-        <!-- Right Section: Displays Submitted Data -->
-        <div class="right-section">
-            <h3>Preview</h3>
-            <div id="dataContainer"></div>
-            <button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
-        </div>
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <div class="form-button">
+                <button type="submit">Login</button>
+            </div>
+        </form>
     </div>
 
-    <script src="js/index.js"></script>
+    <!-- Registration Modal -->
+    <div id="register" class="modal">
+        <span class="close" onclick="closeForm('register')">&times;</span>
+        <h3>Registration</h3>
+        <form id="registerForm">
+            <div class="form-group">
+                <label class="form-label">Username</label>
+                <input type="text" id="registerUsername" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" id="registerEmail" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" id="registerPassword" required>
+            </div>
+            <div class="form-button">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showForm(modalId) {
+            document.querySelectorAll(".modal").forEach(modal => modal.classList.remove("show"));
+            document.getElementById(modalId).classList.add("show");
+        }
+
+        function closeForm(modalId) {
+            document.getElementById(modalId).classList.remove("show");
+        }
+    </script>
 
 </body>
-
 </html>
