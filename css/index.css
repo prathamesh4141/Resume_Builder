@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/img/1559cbe5-48d0-493c-8fd9-905a2abc2ebb.jpeg'); /* Full-page background */
+    background-image: url('img/1559cbe5-48d0-493c-8fd9-905a2abc2ebb.jpeg'); /* Full-page background */
     background-size: cover; /* Ensures the image covers the full page */
     background-repeat: no-repeat;
     background-position: center center; /* Centers the background image */
